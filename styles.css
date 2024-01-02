@@ -1,0 +1,349 @@
+/* ==========================================================================
+   #POMODORO APP STYLES
+   ========================================================================== */
+
+/**
+ *
+ * Inheriting box sizing slightly better best-practice
+ * https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ *
+ */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --pomodoro: url(/img/home.webp);
+  --shortBreak:  var(--pomodoro);
+  --longBreak: var(--pomodoro);
+  --base: #1e1e2e;
+  --crust: #11111b;
+  --Red: #f38ba8;
+  --Mauve: #cba6f7;
+}
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+body {
+  background: var(--pomodoro);
+  transition: background 2s ease;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  user-select: none;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  z-index: 1;
+}
+
+.input-container {
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Background color and opacity */
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#username {
+  border-radius: 2em;
+  font-size: 40px;
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+}
+
+#submit-btn{
+  border-radius: 2em;
+  font-size: 40px;
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  background-color: #f38ba8;
+  color: white;
+}
+
+.username-display {
+  font-size: 2em;
+  font-weight: bold;
+  color: white; /* Text color */
+  /* -webkit-text-stroke: 1px rgb(0, 0, 0); For older versions of Safari and Chrome */
+  /* text-stroke: 1px rgb(0, 0, 0); Standard property */
+  padding: 15px;
+}
+
+.hide {
+  display: none;
+}
+
+#name-form {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+progress {
+  border-radius: 2px;
+  width: 100%;
+  height: 12px;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+}
+
+progress::-webkit-progress-bar {
+ background-color: rgba(0, 0, 0, 0.1);;
+}
+
+progress::-webkit-progress-value {
+  background-color: #fff;
+}
+
+.timer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0px;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  z-index: 3;
+}
+
+.clock {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 15rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  font-family: arial, sans-serif;
+  color: #fff;
+  z-index: 3;
+}
+
+#js-seconds {
+  z-index: 1;
+}
+
+.mode-button {
+  font-size: 16px;
+  height: 28px;
+  cursor: pointer;
+  box-shadow: none;
+  font-weight: 300;
+  border: 2px solid transparent;
+  margin: 10px 10px;
+  border-radius: 4px;
+  padding: 2px 12px;
+  background: white;
+  color: rgba(255, 255, 255, 0.219) 0px 0px 20px;
+  z-index: 3;
+}
+
+.mode-button.active {
+  border-color: rgb(255, 255, 255, 0.219) 0px 0px 20px;
+}
+
+.main-button {
+  cursor: pointer;
+  box-shadow: rgb(255, 255, 255) 0px 0px 20px;
+  font-size: 22px;
+  height: 100px;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  width: 100px;
+  background-color: var(--base);
+  border-width: initial;
+  border-style: none;
+  margin: 20px 0px 0px;
+  padding: 0px 12px;
+  border-radius: 50%;
+  transition: color 1s ease-in-out 1s;
+  z-index: 3;
+}
+
+button:focus, button:active {
+  outline: none;
+}
+
+.main-button.active {
+  transform: translateY(6px);
+  box-shadow: none;
+  outline: none;
+  z-index: 3;
+}
+
+.hidden {
+  display: none;
+}
+
+#js-pomodoro, #js-short-break, #js-long-break {
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: rgb(255, 255, 255) 0px 0px 20px;
+  color: #fff;
+  transition: 0.25s ease-in-out;
+}
+
+#js-pomodoro, #js-short-break, #js-long-break {
+  background-color: var(--base);
+  color: #fff;
+  transition: 0.25s ease-in-out;
+}
+
+#js-pomodoro:hover, #js-short-break:hover, #js-long-break:hover {
+  background-color: rgba(58, 58, 58, 0.25);
+  color: #fff;
+}
+
+.color-switcher{
+  position: fixed;
+  top: 25px; right: -300px;
+  width: 300px;
+  max-width: 300px;
+  padding: 10px;
+  background-color: var(--pomodoro);
+  z-index: 1000;
+  border-radius: 1rem;
+  transition: 0.4s;
+  margin-right: 10px;
+}
+.color-switcher.active{
+  right: 0px;
+}
+.color-switcher h3{
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding: 5px 0;
+  text-align: center;
+  background-color: var(--base);
+  border-radius: 1rem;
+}
+.color-switcher .switcher-btn{
+  position: absolute;
+  top: 0; left: -55px;
+  color: white;
+  background: var(--base);
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 1rem;
+}
+
+.icon-img{
+  height: 20px;
+  width: 20px;
+}
+.theme-buttons-container {
+  z-index: 9999;
+}
+.color-switcher .theme-buttons-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: var(--base);
+  border-radius: 1rem;
+}
+.color-switcher .theme-buttons-container .theme-buttons {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Define the slider width so that it scales properly */
+.slider_container {
+  width: 100%;
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.spotify {
+  position: absolute;
+  bottom: 0px; left: -300px;
+  width: 300px;
+  max-width: 750px;
+  padding: 10px;
+  background-color: var(--pomodoro);
+  z-index: 1000;
+  border-radius: 1rem;
+  transition: 0.4s;
+  margin-right: 10px;
+  display: flex;
+
+  border-radius: 50%;
+  margin: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+  align-items:flex-end;
+  justify-content: center;
+  text-align: center;
+  transition: 0.4s ease-in-out;
+}
+.spotify.active{
+  left: 0px;
+}
+
+.spotify .spotify-btn{
+  position: absolute;
+  right: -55px;
+  color: white;
+  background: var(--base);
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 1rem;
+}
+
+@media screen and (max-width: 550px) {
+  .clock {
+    font-size: 8rem;
+  }
+  #js-minutes {
+    font-size: 6rem;
+  }
+  .separator {
+      font-size: 6rem;
+  }
+  #js-seconds {
+    font-size: 6rem;
+  }
+}

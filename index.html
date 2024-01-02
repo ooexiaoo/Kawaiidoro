@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ambient Pomodoro Clock</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="/img/pomodoro-technique.png">
+  </head>
+  <body>
+    <div class="input-container">
+      <form id="name-form">
+        <label for="username">Enter Your Name</label>
+        <input type="text" id="username" name="username" required />
+        <button id="submit-btn" type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="color-switcher">
+      <div class="switcher-btn">
+        <img class="icon-img" src="/img/image.png">
+        <!-- <a href="https://www.flaticon.com/free-icons/thumbnail" title="thumbnail icons">Thumbnail icons created by Anggara - Flaticon</a> -->
+        </div>
+        <h3>Theme Selector</h3>
+        <div class="theme-buttons-container">
+          <span class="theme-buttons" data-color="url(/img/space.webp)"
+          style="background:url(/img/space.webp);"></span>
+          <span class="theme-buttons" data-color="url(/img/happy\ girl\ face.jpg)"
+          style="background: url(/img/happy\ girl\ face.jpg);"></span>
+          <span class="theme-buttons" data-color="url(/img/space2.jpg)"
+          style="background: url(/img/space2.jpg);"></span>
+          <span class="theme-buttons" data-color="url(/img/starry.webp)"
+          style="background: url(/img/starry.webp);"></span>
+          <span class="theme-buttons" data-color="url(/img/quazart.jpg)"
+          style="background: url(/img/quazart.jpg);"></span>
+          <span class="theme-buttons" data-color="url(/img/flowers.png)"
+          style="background:url(/img/flowers.png);"></span>
+          <span class="theme-buttons" data-color="url(/img/gg.png)"
+          style="background:url(/img/gg.png);"></span>
+          <span class="theme-buttons" data-color="url(/img/g.png)"
+          style="background:url(/img/g.png);"></span>
+          <span class="theme-buttons" data-color="url(/img/bubbles.jpg)"
+          style="background: url(/img/bubbles.jpg);"></span>
+          <span class="theme-buttons" data-color="url(/img/nightsky.webp)"
+          style="background: url(/img/nightsky.webp);"></span>
+          <span class="theme-buttons" data-color="url(/img/girlingarden.webp)"
+          style="background: url(/img/girlingarden.webp);"></span>
+          <span class="theme-buttons" data-color="url(/img/botan.jpg)"
+          style="background: url(/img/botan.jpg);"></span>
+          <span class="theme-buttons" data-color="url(/img/applestyle.jpg)"
+          style="background: url(/img/applestyle.jpg);"></span>
+          <span class="theme-buttons" data-color="url(/img/waves.jpg)"
+          style="background: url(/img/waves.jpg);"></span>
+      </div>
+    </div>
+    <div class="spotify">
+      <div class="spotify-btn">
+        <img class="icon-img" src="/img/music.png">
+        <!-- <a href="https://www.flaticon.com/free-icons/google-play-music" title="google play music icons">Google play music icons created by Mayor Icons - Flaticon</a> -->
+        </div>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWYoYGBbGKurt?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+    <main class="app">
+      <progress id="js-progress" value="0"></progress>
+      <div class="progress-bar"></div>
+      <div class="timer">
+        <div class="button-group mode-buttons" id="js-mode-buttons">
+          <button
+            data-mode="pomodoro"
+            class="button active mode-button"
+            id="js-pomodoro"
+          >
+            Pomodoro
+          </button>
+          <button
+            data-mode="shortBreak"
+            class="button mode-button"
+            id="js-short-break"
+          >
+            Short break
+          </button>
+          <button
+            data-mode="longBreak"
+            class="button mode-button"
+            id="js-long-break"
+          >
+            Long break
+          </button>
+        </div>
+        <div class="clock" id="js-clock">
+          <span id="js-minutes">25</span>
+          <span class="separator">:</span>
+          <span id="js-seconds">00</span>
+        </div>
+        <button class="main-button" data-action="start" id="js-btn">
+          Start
+        </button>
+      </div>
+    </main>
+    <div class="hidden">
+      <audio src="backtowork.mp3" data-sound="pomodoro"></audio>
+      <audio src="break.mp3" data-sound="shortBreak"></audio>
+      <audio src="break.mp3" data-sound="longBreak"></audio>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
