@@ -20,7 +20,7 @@ html {
 }
 
 :root {
-  --pomodoro: url(/img/home.webp);
+  --pomodoro: url(/img/kawaii.webp);
   --shortBreak:  var(--pomodoro);
   --longBreak: var(--pomodoro);
   --base: #1e1e2e;
@@ -67,7 +67,7 @@ body {
 
 #username {
   border-radius: 2em;
-  font-size: 40px;
+  font-size: 25px;
   width: 200px;
   padding: 10px;
   margin: 10px;
@@ -76,7 +76,7 @@ body {
 
 #submit-btn{
   border-radius: 2em;
-  font-size: 40px;
+  font-size: 25px;
   width: 200px;
   padding: 10px;
   margin: 10px;
@@ -171,7 +171,7 @@ progress::-webkit-progress-value {
 
 .main-button {
   cursor: pointer;
-  box-shadow: rgb(255, 255, 255) 0px 0px 20px;
+  box-shadow: rgb(255, 255, 255) 0px 0px 10px;
   font-size: 22px;
   height: 100px;
   text-transform: uppercase;
@@ -205,7 +205,7 @@ button:focus, button:active {
 
 #js-pomodoro, #js-short-break, #js-long-break {
   background-color: rgba(255, 255, 255, 0);
-  box-shadow: rgb(255, 255, 255) 0px 0px 20px;
+  box-shadow: rgb(255, 255, 255) 0px 0px 10px;
   color: #fff;
   transition: 0.25s ease-in-out;
 }

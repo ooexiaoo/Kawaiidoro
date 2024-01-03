@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (storedTimerData) {
           // If timer data exists, load it and update the timer
-          let timer = JSON.parse(storedTimerData);
+          var timer = JSON.parse(storedTimerData);
 
           if (pausedTime) {
             // If there is paused time, resume the timer from where it was stopped
