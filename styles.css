@@ -346,4 +346,8 @@ button:focus, button:active {
   #js-seconds {
     font-size: 6rem;
   }
+  .spotify {
+    visibility: hidden;
+    display: none;
+  }
 }
