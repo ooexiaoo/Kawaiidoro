@@ -20,7 +20,7 @@ html {
 }
 
 :root {
-  --pomodoro: url(/img/kawaii.webp);
+  --pomodoro: url(/img/girlflowers.webp);
   --shortBreak:  var(--pomodoro);
   --longBreak: var(--pomodoro);
   --base: #1e1e2e;
@@ -161,17 +161,17 @@ progress::-webkit-progress-value {
   border-radius: 4px;
   padding: 2px 12px;
   background: white;
-  color: rgba(255, 255, 255, 0.219) 0px 0px 20px;
+  color: rgba(255, 255, 255, 0.219) 0px 0px 5px;
   z-index: 3;
 }
 
-.mode-button.active {
-  border-color: rgb(255, 255, 255, 0.219) 0px 0px 20px;
-}
+/* .mode-button.active {
+  border-color: rgb(255, 255, 255, 0.219) 0px 0px 5px;
+} */
 
 .main-button {
   cursor: pointer;
-  box-shadow: rgb(255, 255, 255) 0px 0px 10px;
+  /* box-shadow: rgb(255, 255, 255) 0px 0px 5px; */
   font-size: 22px;
   height: 100px;
   text-transform: uppercase;
@@ -205,7 +205,7 @@ button:focus, button:active {
 
 #js-pomodoro, #js-short-break, #js-long-break {
   background-color: rgba(255, 255, 255, 0);
-  box-shadow: rgb(255, 255, 255) 0px 0px 10px;
+  /* box-shadow: rgb(255, 255, 255) 0px 0px 10px; */
   color: #fff;
   transition: 0.25s ease-in-out;
 }
@@ -297,29 +297,32 @@ button:focus, button:active {
 
 .spotify {
   position: absolute;
-  bottom: 0px; left: -300px;
-  width: 300px;
+  bottom: 0px; left: -600px;
+  width: 590px;
   max-width: 750px;
   padding: 10px;
-  background-color: var(--pomodoro);
+  background-color: var(--base);
   z-index: 1000;
-  border-radius: 1rem;
+  padding: 0px;
+  border-radius: 10px;
   transition: 0.4s;
   margin-right: 10px;
-  display: flex;
+  display: grid;
 
-  border-radius: 50%;
   margin: 10px;
   cursor: pointer;
   color: white;
   font-size: 1rem;
-  align-items:flex-end;
-  justify-content: center;
-  text-align: center;
+  align-items: self-end;
+  justify-content: space-evenly;
+  
   transition: 0.4s ease-in-out;
 }
 .spotify.active{
   left: 0px;
+  width: 590px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .spotify .spotify-btn{
@@ -328,9 +331,36 @@ button:focus, button:active {
   color: white;
   background: var(--base);
   padding: 10px 20px;
+  margin: 0 -10px;
   cursor: pointer;
   font-size: 20px;
   border-radius: 1rem;
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+  transition: 0.4s ease-in-out;
+}
+
+.thumbnail {
+  margin: 0 5px;
+  width: 60px;
+  height: 60px;
+  border-radius: 1em;
+}
+
+#spotifyPlayersContainer {
+  width: 590px;
+}
+
+.ssec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 590px;
 }
 
 @media screen and (max-width: 550px) {

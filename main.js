@@ -276,3 +276,34 @@ const timer = {
     document.querySelector('.spotify-btn').onclick = () => {
       document.querySelector('.spotify').classList.toggle('active');
     };
+
+// Get necessary elements
+const thumbnailsContainer = document.querySelector('.options');
+const spotifyPlayers = document.querySelectorAll('#spotifyPlayersContainer iframe');
+const thumbnails = document.querySelectorAll('.thumbnail');
+
+// Show the default selected playlist (1st thumbnail) and hide others
+spotifyPlayers.forEach((player, index) => {
+  if (index !== 0) {
+    player.style.display = 'none';
+  }
+});
+
+// Handle click on thumbnails to display associated player
+thumbnails.forEach(thumbnail => {
+  thumbnail.addEventListener('click', () => {
+    const selectedIndex = thumbnail.getAttribute('data-index');
+
+    // Hide all players
+    spotifyPlayers.forEach(player => {
+      player.style.display = 'none';
+    });
+
+    // Show selected player based on the clicked thumbnail's index
+    spotifyPlayers[selectedIndex].style.display = 'block';
+
+    // Toggle 'selected' class for thumbnails
+    thumbnails.forEach(thumb => thumb.classList.remove('selected'));
+    thumbnail.classList.add('selected');
+  });
+});
