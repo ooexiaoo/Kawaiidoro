@@ -1,0 +1,33 @@
+  .chart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    text-align: center;
+  }
+  .bar {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+  }
+  .bar-name {
+    font-weight: bold;
+  }
+  .bar-progress {
+    flex-grow: 1;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #1e1e2e;
+    margin-left: 5px;
+    overflow: hidden;
+    margin-right: 5px;
+  }
+  .bar-fill {
+    display: block;
+    height: 100%;
+    background-color: #f38ba8;
+  }
+  .percentage {
+    margin-top: 5px;
+    font-weight: bold;
+  }

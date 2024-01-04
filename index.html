@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Ambient Pomodoro Clock</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="time.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="/img/pomodoro-technique.png">
   </head>
@@ -74,10 +75,46 @@
         </div>
       </div>
     </div>
+
+
     <main class="app">
       <progress id="js-progress" value="0"></progress>
       <div class="progress-bar"></div>
       <div class="timer">
+
+        <!-- Timebar -->
+      <div class="chart">
+        <div class="bar">
+          <span class="bar-name">Day:</span>
+          <div class="bar-progress">
+            <div class="bar-fill" id="dayBar"></div>
+          </div>
+          <span class="percentage" id="dayPercentage"></span>
+        </div>
+        <!-- <div class="bar">
+          <span class="bar-name">Week:</span>
+          <div class="bar-progress">
+            <div class="bar-fill" id="weekBar"></div>
+          </div>
+          <span class="percentage" id="weekPercentage"></span>
+        </div>
+        <div class="bar">
+          <span class="bar-name">Month:</span>
+          <div class="bar-progress">
+            <div class="bar-fill" id="monthBar"></div>
+          </div>
+          <span class="percentage" id="monthPercentage"></span>
+        </div>
+        <div class="bar">
+          <span class="bar-name">Year:</span>
+          <div class="bar-progress">
+            <div class="bar-fill" id="yearBar"></div>
+          </div>
+          <span class="percentage" id="yearPercentage"></span>
+        </div> -->
+      </div>
+      <!-- Timebar end -->
+
         <div class="button-group mode-buttons" id="js-mode-buttons">
           <button
             data-mode="pomodoro"
@@ -117,5 +154,6 @@
       <audio src="break.mp3" data-sound="longBreak"></audio>
     </div>
     <script src="main.js"></script>
+    <script src="time.js"></script>
   </body>
 </html>
