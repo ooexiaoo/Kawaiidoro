@@ -1,70 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const nameForm = document.getElementById('name-form');
-  const inputContainer = document.querySelector('.input-container');
-  const usernameDisplay = document.createElement('div');
-  usernameDisplay.classList.add('username-display');
-
-  try {
-    // Check if name exists in local storage
-    const savedName = localStorage.getItem('username');
-
-    if (savedName) {
-      // If name exists, display it and hide the input container
-      usernameDisplay.textContent = `Hello, ${savedName}!`;
-      usernameDisplay.classList.remove('hide');
-      inputContainer.classList.add('hide');
-      document.body.appendChild(usernameDisplay);
-    } else {
-      // If name doesn't exist, show the input container
-      inputContainer.classList.remove('hide');
-    }
-
-    nameForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const usernameInput = document.getElementById('username').value.trim();
-      if (usernameInput !== '') {
-        try {
-          // Save name to local storage
-          localStorage.setItem('username', usernameInput);
-          // Display entered name and hide the input container
-          usernameDisplay.textContent = `Hello, ${usernameInput}!`;
-          usernameDisplay.classList.remove('hide');
-          inputContainer.classList.add('hide');
-          document.body.appendChild(usernameDisplay);
-        } catch (error) {
-          // Handle error while saving to local storage
-          console.error('Error saving username to localStorage:', error);
-        }
-      }
-
-      try {
-        // Check if timer data and paused time exist in localStorage
-        const storedTimerData = localStorage.getItem('timerData');
-        const pausedTime = localStorage.getItem('pausedTime');
-
-        if (storedTimerData) {
-          // If timer data exists, load it and update the timer
-          var timer = JSON.parse(storedTimerData);
-
-          if (pausedTime) {
-            // If there is paused time, resume the timer from where it was stopped
-            timer.remainingTime.total = Number.parseInt(pausedTime, 10);
-            startTimer(); // Resume the timer
-          } else {
-            updateClock(); // Update the clock with the retrieved timer data
-          }
-        }
-      } catch (error) {
-        // Handle error while accessing localStorage data
-        console.error('Error accessing timer data from localStorage:', error);
-      }
-    });
-  } catch (error) {
-    // Handle any other localStorage related errors
-    console.error('Error interacting with localStorage:', error);
-  }
-});
-
 const timer = {
     pomodoro: 25,
     shortBreak: 5,
@@ -174,7 +107,7 @@ const timer = {
   
       timer.remainingTime = getRemainingTime(endTime);
   
-      localStorage.setItem('pausedTime', remainingTime); // Save the paused time
+      localStorage.setItem('pausedTime', remainingTime.toString()); // Save the paused time
       localStorage.setItem('timerData', JSON.stringify(timer)); // Save the timer data
     } catch (error) {
       // Handle errors while saving data to localStorage
@@ -306,4 +239,80 @@ thumbnails.forEach(thumbnail => {
     thumbnails.forEach(thumb => thumb.classList.remove('selected'));
     thumbnail.classList.add('selected');
   });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const nameForm = document.getElementById('name-form');
+  const inputContainer = document.querySelector('.input-container');
+  const usernameDisplay = document.createElement('div');
+  usernameDisplay.classList.add('username-display');
+
+  try {
+    // Check if name exists in local storage
+    const savedName = localStorage.getItem('username');
+
+    if (savedName) {
+      // If name exists, display it and hide the input container
+      usernameDisplay.textContent = `Hello, ${savedName}!`;
+      usernameDisplay.classList.remove('hide');
+      inputContainer.classList.add('hide');
+      document.body.appendChild(usernameDisplay);
+    } else {
+      // If name doesn't exist, show the input container
+      inputContainer.classList.remove('hide');
+    }
+
+    const usernameInput = document.getElementById('username');
+
+    usernameInput.addEventListener('input', function () {
+      // Limit input to 15 characters
+      if (usernameInput.value.length > 12) {
+        usernameInput.value = usernameInput.value.slice(0, 12);
+      }
+    });
+
+    nameForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const usernameInput = document.getElementById('username').value.trim();
+      if (usernameInput !== '') {
+        try {
+          // Save name to local storage
+          localStorage.setItem('username', usernameInput);
+          // Display entered name and hide the input container
+          usernameDisplay.textContent = `Hello, ${usernameInput}!`;
+          usernameDisplay.classList.remove('hide');
+          inputContainer.classList.add('hide');
+          document.body.appendChild(usernameDisplay);
+        } catch (error) {
+          // Handle error while saving to local storage
+          console.error('Error saving username to localStorage:', error);
+        }
+      }
+
+      try {
+        // Check if timer data and paused time exist in localStorage
+        const storedTimerData = localStorage.getItem('timerData');
+        const pausedTime = localStorage.getItem('pausedTime');
+
+        if (storedTimerData) {
+          // If timer data exists, load it and update the timer
+          var timer = JSON.parse(storedTimerData);
+
+          if (pausedTime) {
+            // If there is paused time, resume the timer from where it was stopped
+            timer.remainingTime.total = Number.parseInt(pausedTime, 10);
+            startTimer(); // Resume the timer
+          } else {
+            updateClock(); // Update the clock with the retrieved timer data
+          }
+        }
+      } catch (error) {
+        // Handle error while accessing localStorage data
+        console.error('Error accessing timer data from localStorage:', error);
+      }
+    });
+  } catch (error) {
+    // Handle any other localStorage related errors
+    console.error('Error interacting with localStorage:', error);
+  }
 });
