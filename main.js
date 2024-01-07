@@ -266,8 +266,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     usernameInput.addEventListener('input', function () {
       // Limit input to 15 characters
-      if (usernameInput.value.length > 12) {
-        usernameInput.value = usernameInput.value.slice(0, 12);
+      if (usernameInput.value.length > 8) {
+        usernameInput.value = usernameInput.value.slice(0, 8);
       }
     });
 
