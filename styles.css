@@ -27,6 +27,7 @@ html {
   --crust: #11111b;
   --Red: #f38ba8;
   --Mauve: #cba6f7;
+  --purple: #af73b4;
 }
 /* .overlay{
   position: absolute;
@@ -91,7 +92,7 @@ body {
   font-weight: bold;
   color: white; /* Text color */
   padding: 15px;
-  -webkit-text-stroke: 1px #f38ba8;
+  -webkit-text-stroke: 1px var(--Red);
 }
 
 .hide {
