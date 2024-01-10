@@ -20,7 +20,7 @@ html {
 }
 
 :root {
-  --pomodoro: url(/img/girlflowers.webp);
+  --pomodoro: url(/img/pxfuel\(3\).jpg);
   --shortBreak:  var(--pomodoro);
   --longBreak: var(--pomodoro);
   --base: #1e1e2e;
@@ -225,12 +225,6 @@ button:focus, button:active {
 
 .hidden {
   display: none;
-}
-
-.button-group {
-  background-color: rgba(0, 0, 0, 0.25);
-  border-radius: 1rem;
-  margin-top: 5px;
 }
 
 #js-pomodoro, #js-short-break, #js-long-break {
