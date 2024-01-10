@@ -187,7 +187,7 @@ const timer = {
   
       // Additional logic related to Notification permissions or other setup
   
-      switchMode('pomodoro'); // Not sure if this line is intended to be here twice
+      /* switchMode('pomodoro'); // Not sure if this line is intended to be here twice */
     } catch (error) {
       console.error('Error while loading timer data:', error);
     }
