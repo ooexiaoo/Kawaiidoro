@@ -57,6 +57,18 @@
           style="background: url(/img/waves60.webp);"></span>
           <span class="theme-buttons" data-color="var(--crust)"
           style="background:var(--crust);"></span>
+
+          <div class="timer-settings">
+            <label for="pomodoro-input">Pomodoro Time (minutes): </label>
+            <input type="number" id="pomodoro-input" value="25" min="1">
+            
+            <label for="short-break-input">Short Break Time (minutes): </label>
+            <input type="number" id="short-break-input" value="5" min="1">
+            
+            <label for="long-break-input">Long Break Time (minutes): </label>
+            <input type="number" id="long-break-input" value="15" min="1">
+          </div>
+          
       </div>
     </div>
     <div class="spotify">
@@ -159,6 +171,7 @@
     </div>
     <script src="main.js"></script>
     <script src="time.js"></script>
+    <script src="colors.js"></script>
 <!--     <script src="signin.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script> -->
   </body>

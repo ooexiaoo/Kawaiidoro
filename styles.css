@@ -9,7 +9,7 @@ html {
 }
 
 :root {
-  --pomodoro: url(/img/pxfuel\(3\).jpg);
+  --pomodoro: url(/img/lookingatyou.webp);
   --shortBreak:  var(--pomodoro);
   --longBreak: var(--pomodoro);
   --base: #1e1e2e;
@@ -17,6 +17,12 @@ html {
   --Red: #f38ba8;
   --Mauve: #cba6f7;
   --purple: #af73b4;
+  --three: #244070;
+  --waves: #08114c;
+  --clouds: #264C77;
+  --eight: #1d282d;
+  --eating: #434d3e;
+  --looking: #d5dad9;
 }
 /* .overlay{
   position: absolute;
@@ -375,6 +381,12 @@ button:focus, button:active {
   align-items: center;
   justify-content: center;
   width: 590px;
+}
+
+.timer-settings {
+  display: flex;
+  flex-direction: column;
+  
 }
 
 @media screen and (max-width: 550px) {

@@ -1,3 +1,80 @@
+/* User timer */
+
+/* User input for timer */
+
+document.addEventListener('DOMContentLoaded', () => {
+  try {
+    const storedTimerData = localStorage.getItem('timerData');
+
+    // Notification permissions logic
+    if ('Notification' in window) {
+      if (Notification.permission !== 'granted' && Notification.permission !== 'denied') {
+        Notification.requestPermission().then(function (permission) {
+          if (permission === 'granted') {
+            new Notification(
+              'Awesome! You will be notified at the start of each session'
+            );
+          }
+        });
+      }
+    }
+
+    switchMode('pomodoro');
+
+    // Additional logic related to Notification permissions or other setup
+    loadTimerSettings();
+
+    /* switchMode('pomodoro'); // Not sure if this line is intended to be here twice */
+  } catch (error) {
+    console.error('Error while loading timer data:', error);
+  }
+});
+
+function loadTimerSettings() {
+  // Load timer settings from localStorage or use default values
+  const pomodoroInput = document.getElementById('pomodoro-input');
+  const shortBreakInput = document.getElementById('short-break-input');
+  const longBreakInput = document.getElementById('long-break-input');
+
+  if (localStorage.getItem('timerSettings')) {
+    const timerSettings = JSON.parse(localStorage.getItem('timerSettings'));
+
+    pomodoroInput.value = timerSettings.pomodoro;
+    shortBreakInput.value = timerSettings.shortBreak;
+    longBreakInput.value = timerSettings.longBreak;
+  }
+
+  // Add event listeners to update timer settings on user input
+  pomodoroInput.addEventListener('change', updateTimerSettings);
+  shortBreakInput.addEventListener('change', updateTimerSettings);
+  longBreakInput.addEventListener('change', updateTimerSettings);
+}
+
+function updateTimerSettings() {
+  // Update timer settings in localStorage when the user changes them
+  const pomodoroInput = document.getElementById('pomodoro-input');
+  const shortBreakInput = document.getElementById('short-break-input');
+  const longBreakInput = document.getElementById('long-break-input');
+
+  const timerSettings = {
+    pomodoro: parseInt(pomodoroInput.value),
+    shortBreak: parseInt(shortBreakInput.value),
+    longBreak: parseInt(longBreakInput.value),
+  };
+
+  localStorage.setItem('timerSettings', JSON.stringify(timerSettings));
+
+  // You can also update the timer object directly if needed
+  timer.pomodoro = timerSettings.pomodoro;
+  timer.shortBreak = timerSettings.shortBreak;
+  timer.longBreak = timerSettings.longBreak;
+
+  // Update the current timer mode with the new settings
+  switchMode(timer.mode);
+}
+
+/* User timer end */
+
 const timer = {
     pomodoro: 25,
     shortBreak: 5,
