@@ -9,10 +9,10 @@ themeButtons.forEach((color, index) => {
           document.querySelector(':root').style.setProperty('--Red', '#af73b4');
           break;
         case 1:
-          document.querySelector(':root').style.setProperty('--Red', '#c66c31');
+          document.querySelector(':root').style.setProperty('--Red', '#c64b24');
           break;
         case 2:
-          document.querySelector(':root').style.setProperty('--Red', '#f6e9f3');
+          document.querySelector(':root').style.setProperty('--Red', '#ff9ce8');
           break;
         case 3:
           document.querySelector(':root').style.setProperty('--Red', '#d1c4e0');

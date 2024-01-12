@@ -9,12 +9,12 @@ html {
 }
 
 :root {
-  --pomodoro: url(/img/lookingatyou.webp);
+  --pomodoro: url(/img/space2.jpg);
   --shortBreak:  var(--pomodoro);
   --longBreak: var(--pomodoro);
   --base: #1e1e2e;
   --crust: #11111b;
-  --Red: #c66c31;
+  --Red: #ff9ce8;
   --Mauve: #cba6f7;
   --purple: #af73b4;
   --three: #244070;
@@ -197,7 +197,7 @@ progress::-webkit-progress-value {
   color: rgb(255, 255, 255);
   font-weight: bold;
   width: 100px;
-  background-color: var(--base);
+  background-color: var(--Red);
   border-width: initial;
   border-style: none;
   margin: 20px 0px 0px;
@@ -231,7 +231,7 @@ button:focus, button:active {
 }
 
 #js-pomodoro, #js-short-break, #js-long-break {
-  background-color: var(--base);
+  background-color: var(--Red);
   color: #fff;
   transition: 0.25s ease-in-out;
 }
@@ -247,7 +247,7 @@ button:focus, button:active {
   width: 300px;
   max-width: 300px;
   padding: 10px;
-  background-color: var(--pomodoro);
+  background-color: var(--red);
   z-index: 1000;
   border-radius: 1rem;
   transition: 0.4s;
@@ -262,20 +262,19 @@ button:focus, button:active {
   margin-bottom: 10px;
   padding: 5px 0;
   text-align: center;
-  background-color: var(--base);
+  background-color: var(--Red);
   border-radius: 1rem;
 }
 .color-switcher .switcher-btn{
   position: absolute;
   top: 0; left: -55px;
   color: white;
-  background: var(--base);
+  background-color: var(--Red);
   padding: 10px 20px;
   cursor: pointer;
   font-size: 20px;
   border-radius: 1rem;
 }
-
 .icon-img{
   height: 20px;
   width: 20px;
@@ -289,6 +288,7 @@ button:focus, button:active {
   justify-content: center;
   background-color: var(--base);
   border-radius: 1rem;
+  background-color: var(--Red);
 }
 .color-switcher .theme-buttons-container .theme-buttons {
   display: flex;
@@ -349,7 +349,7 @@ button:focus, button:active {
   position: absolute;
   right: -55px;
   color: white;
-  background: var(--base);
+  background: var(--Red);
   padding: 10px 20px;
   margin: 0 -10px;
   cursor: pointer;
@@ -381,6 +381,8 @@ button:focus, button:active {
   align-items: center;
   justify-content: center;
   width: 590px;
+  background-color: var(--Red);
+  border-radius: 1.1rem;
 }
 
 .timer-settings {
