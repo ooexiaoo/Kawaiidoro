@@ -2,7 +2,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
@@ -10,7 +12,7 @@ html {
 
 :root {
   --pomodoro: url(/img/space2.jpg);
-  --shortBreak:  var(--pomodoro);
+  --shortBreak: var(--pomodoro);
   --longBreak: var(--pomodoro);
   --base: #1e1e2e;
   --crust: #11111b;
@@ -19,7 +21,7 @@ html {
   --purple: #af73b4;
   --three: #244070;
   --waves: #08114c;
-  --clouds: #264C77;
+  --clouds: #264c77;
   --eight: #1d282d;
   --eating: #434d3e;
   --looking: #d5dad9;
@@ -37,7 +39,8 @@ html {
 body {
   background: var(--pomodoro);
   transition: background 2s ease;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   user-select: none;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -71,7 +74,7 @@ body {
   border: none;
 }
 
-#submit-btn{
+#submit-btn {
   border-radius: 2em;
   font-size: 25px;
   width: 200px;
@@ -132,7 +135,7 @@ progress[value]::-moz-progress-bar {
 }
 
 progress::-webkit-progress-bar {
- background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 progress::-webkit-progress-value {
@@ -207,7 +210,8 @@ progress::-webkit-progress-value {
   z-index: 3;
 }
 
-button:focus, button:active {
+button:focus,
+button:active {
   outline: none;
 }
 
@@ -222,7 +226,9 @@ button:focus, button:active {
   display: none;
 }
 
-#js-pomodoro, #js-short-break, #js-long-break {
+#js-pomodoro,
+#js-short-break,
+#js-long-break {
   background-color: rgba(255, 255, 255, 0);
   /* box-shadow: rgb(255, 255, 255) 0px 0px 10px; */
   color: #fff;
@@ -230,20 +236,25 @@ button:focus, button:active {
   border-radius: 4rem;
 }
 
-#js-pomodoro, #js-short-break, #js-long-break {
+#js-pomodoro,
+#js-short-break,
+#js-long-break {
   background-color: var(--Red);
   color: #fff;
   transition: 0.25s ease-in-out;
 }
 
-#js-pomodoro:hover, #js-short-break:hover, #js-long-break:hover {
+#js-pomodoro:hover,
+#js-short-break:hover,
+#js-long-break:hover {
   background-color: rgba(58, 58, 58, 0.25);
   color: #fff;
 }
 
-.color-switcher{
+.color-switcher {
   position: fixed;
-  top: 25px; right: -300px;
+  top: 25px;
+  right: -300px;
   width: 300px;
   max-width: 300px;
   padding: 10px;
@@ -253,10 +264,10 @@ button:focus, button:active {
   transition: 0.4s;
   margin-right: 10px;
 }
-.color-switcher.active{
+.color-switcher.active {
   right: 0px;
 }
-.color-switcher h3{
+.color-switcher h3 {
   color: rgb(255, 255, 255);
   font-size: 20px;
   margin-bottom: 10px;
@@ -265,9 +276,10 @@ button:focus, button:active {
   background-color: var(--Red);
   border-radius: 1rem;
 }
-.color-switcher .switcher-btn{
+.color-switcher .switcher-btn {
   position: absolute;
-  top: 0; left: -55px;
+  top: 0;
+  left: -55px;
   color: white;
   background-color: var(--Red);
   padding: 10px 20px;
@@ -277,14 +289,14 @@ button:focus, button:active {
   display: flex;
   align-items: center;
 }
-.icon-img{
+.icon-img {
   height: 20px;
   width: 20px;
 }
 .theme-buttons-container {
   z-index: 9999;
 }
-.color-switcher .theme-buttons-container{
+.color-switcher .theme-buttons-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -319,7 +331,8 @@ button:focus, button:active {
 
 .spotify {
   position: absolute;
-  bottom: 0px; left: -600px;
+  bottom: 0px;
+  left: -600px;
   width: 590px;
   max-width: 750px;
   padding: 10px;
@@ -337,17 +350,17 @@ button:focus, button:active {
   font-size: 1rem;
   align-items: self-end;
   justify-content: space-evenly;
-  
+
   transition: 0.4s ease-in-out;
 }
-.spotify.active{
+.spotify.active {
   left: 0px;
   width: 590px;
   display: flex;
   justify-content: space-evenly;
 }
 
-.spotify .spotify-btn{
+.spotify .spotify-btn {
   position: absolute;
   right: -55px;
   color: white;
@@ -399,7 +412,8 @@ button:focus, button:active {
   padding: 5px;
 }
 
-.timer-settings input, label {
+.timer-settings input,
+label {
   width: 150px;
   padding: 5px;
   border: none;
@@ -408,72 +422,52 @@ button:focus, button:active {
   font-weight: bold;
 }
 
-/* Floating ad container styles */
-.floating-ad {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: var(--base);
-  padding: 5px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-}
-
 /* Slider styles */
-.switch {
+.sticky-ads {
   position: fixed;
-  bottom: 5px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  display: inline-block;
-  width: 40px;
-  height: 22px;
+  width: 320px;
+  min-height: 50px;
+  max-height: 50px;
+  padding: 0;
+  box-shadow: 0 -6px 18px 0 rgba(9, 32, 76, 0.1);
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fefefe;
+  z-index: 20;
 }
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
+.sticky-ads-close {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px 0 0;
   position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
   right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .5s;
-  transition: .5s;
-  border-radius: 1rem;
+  top: -30px;
+  background-color: #fefefe;
+  box-shadow: 0 -6px 18px 0 rgba(9, 32, 76, 0.08);
+  cursor: pointer;
 }
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 15px;
-  width: 15px;
-  left: 1px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .5s;
-  transition: .5s;
-  border-radius: 1rem;
+.sticky-ads .sticky-ads-close svg {
+  width: 22px;
+  height: 22px;
+  fill: #000;
 }
-
-input:checked + .slider {
-  background-color: #4caf50;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #4caf50;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(22px);
-  -ms-transform: translateX(22px);
-  transform: translateX(22px);
+.sticky-ads .sticky-ads-content {
+  overflow: hidden;
+  display: block;
+  position: relative;
+  height: 50px;
+  width: 320px;
+  margin-right: 0px;
+  margin-left: 0px;
 }
 
 @media screen and (max-width: 550px) {
@@ -484,7 +478,7 @@ input:checked + .slider:before {
     font-size: 6rem;
   }
   .separator {
-      font-size: 6rem;
+    font-size: 6rem;
   }
   #js-seconds {
     font-size: 6rem;
