@@ -7,107 +7,194 @@
     <title>Ambient Pomodoro Clock</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="time.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="/img/pomodoro-technique.png">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="/img/pomodoro-technique.png" />
     <!-- <meta name="google-signin-client_id" content="771363056084-2o72bubv5n8f4ggame9ht91tf58r7akj.apps.googleusercontent.com"> -->
   </head>
   <body>
     <div class="input-container">
       <form id="name-form">
         <label for="username">Happy to have you here! 🤗</label>
-        <input type="text" placeholder="Enter Name (max 8 characters)" id="username" name="username" required />
+        <input
+          type="text"
+          placeholder="Enter Name (max 8 characters)"
+          id="username"
+          name="username"
+          required
+        />
         <button id="submit-btn" type="submit">Lets Go!</button>
       </form>
     </div>
     <div class="color-switcher">
       <div class="switcher-btn">
-        <img class="icon-img" src="/img/image.png">
+        <img class="icon-img" src="/img/image.png" />
         <!-- <a href="https://www.flaticon.com/free-icons/thumbnail" title="thumbnail icons">Thumbnail icons created by Anggara - Flaticon</a> -->
-        </div>
-        <h3>Settings</h3>
-        <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
-        <div class="theme-buttons-container">
-          <span class="theme-buttons" data-color="url(/img/Anime\ Boy\ 4k.jpg)"
-          style="background:url(/img/Anime\ Boy\ 4k60.jpg);"></span>
-          <span class="theme-buttons" data-color="url(/img/lookingatyou.webp)"
-          style="background: url(/img/lookingatyou60.webp);"></span>
-          <span class="theme-buttons" data-color="url(/img/space2.jpg)"
-          style="background: url(/img/space260.webp);"></span>
-          <span class="theme-buttons" data-color="url(/img/pxfuel.jpg)"
-          style="background: url(/img/pxfuel60.webp);"></span>
-          <span class="theme-buttons" data-color="url(/img/pxfuel\(1\).jpg)"
-          style="background: url(/img/pxfuel\(1\)60.webp);"></span>
-          <span class="theme-buttons" data-color="url(/img/Digital\ Aesthetic.jpg)"
-          style="background:url(/img/Digital\ Aesthetic60.webp);"></span>
-          <span class="theme-buttons" data-color="url(/img/pxfuel\(8\).jpg)"
-          style="background:url(/img/pxfuel\(8\)60.webp);"></span>
-          <span class="theme-buttons" data-color="url(/img/bubbles.jpg)"
-          style="background: url(/img/bubbles60.webp);"></span>
-          <span class="theme-buttons" data-color="url(/img/teen.webp)"
-          style="background: url(/img/teen60.webp);"></span>
-          <span class="theme-buttons" data-color="url(/img/eating.webp)"
-          style="background: url(/img/eating60.webp);"></span>
-          <span class="theme-buttons" data-color="url(/img/cleaning.webp)"
-          style="background: url(/img/cleaning60.webp);"></span>
-          <span class="theme-buttons" data-color="url(/img/clouds.webp)"
-          style="background: url(/img/clouds60.webp);"></span>
-          <span class="theme-buttons" data-color="url(/img/pxfuel\(3\).jpg)"
-          style="background: url(/img/pxfuel\(3\)60.jpg);"></span>
-          <span class="theme-buttons" data-color="url(/img/waves.jpg)"
-          style="background: url(/img/waves60.webp);"></span>
-          <span class="theme-buttons" data-color="var(--crust)"
-          style="background:var(--crust);"></span>
+      </div>
+      <h3>Settings</h3>
+      <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
+      <div class="theme-buttons-container">
+        <span
+          class="theme-buttons"
+          data-color="url(/img/Anime\ Boy\ 4k.jpg)"
+          style="background: url(/img/Anime\ Boy\ 4k60.jpg)"
+        ></span>
+        <span
+          class="theme-buttons"
+          data-color="url(/img/lookingatyou.webp)"
+          style="background: url(/img/lookingatyou60.webp)"
+        ></span>
+        <span
+          class="theme-buttons"
+          data-color="url(/img/space2.jpg)"
+          style="background: url(/img/space260.webp)"
+        ></span>
+        <span
+          class="theme-buttons"
+          data-color="url(/img/pxfuel.jpg)"
+          style="background: url(/img/pxfuel60.webp)"
+        ></span>
+        <span
+          class="theme-buttons"
+          data-color="url(/img/pxfuel\(1\).jpg)"
+          style="background: url(/img/pxfuel\(1\)60webp)"
+        ></span>
+        <span
+          class="theme-buttons"
+          data-color="url(/img/Digital\ Aesthetic.jpg)"
+          style="background: url(/img/Digital\ Aesthetic60.webp)"
+        ></span>
+        <span
+          class="theme-buttons"
+          data-color="url(/img/pxfuel\(8\).jpg)"
+          style="background: url(/img/pxfuel\(8\)60webp)"
+        ></span>
+        <span
+          class="theme-buttons"
+          data-color="url(/img/bubbles.jpg)"
+          style="background: url(/img/bubbles60.webp)"
+        ></span>
+        <span
+          class="theme-buttons"
+          data-color="url(/img/teen.webp)"
+          style="background: url(/img/teen60.webp)"
+        ></span>
+        <span
+          class="theme-buttons"
+          data-color="url(/img/eating.webp)"
+          style="background: url(/img/eating60.webp)"
+        ></span>
+        <span
+          class="theme-buttons"
+          data-color="url(/img/cleaning.webp)"
+          style="background: url(/img/cleaning60.webp)"
+        ></span>
+        <span
+          class="theme-buttons"
+          data-color="url(/img/clouds.webp)"
+          style="background: url(/img/clouds60.webp)"
+        ></span>
+        <span
+          class="theme-buttons"
+          data-color="url(/img/pxfuel\(3\).jpg)"
+          style="background: url(/img/pxfuel\(3\)60jpg)"
+        ></span>
+        <span
+          class="theme-buttons"
+          data-color="url(/img/waves.jpg)"
+          style="background: url(/img/waves60.webp)"
+        ></span>
+        <span
+          class="theme-buttons"
+          data-color="var(--crust)"
+          style="background: var(--crust)"
+        ></span>
 
-          <div class="timer-settings">
-            <label for="pomodoro-input">Pomodoro Time</label>
-            <input type="number" id="pomodoro-input" value="25" min="1">
-            
-            <label for="short-break-input">Short Break Time</label>
-            <input type="number" id="short-break-input" value="5" min="1">
-            
-            <label for="long-break-input">Long Break Time</label>
-            <input type="number" id="long-break-input" value="15" min="1">
-          </div>
-          
+        <div class="timer-settings">
+          <label for="pomodoro-input">Pomodoro Time</label>
+          <input type="number" id="pomodoro-input" value="25" min="1" />
+
+          <label for="short-break-input">Short Break Time</label>
+          <input type="number" id="short-break-input" value="5" min="1" />
+
+          <label for="long-break-input">Long Break Time</label>
+          <input type="number" id="long-break-input" value="15" min="1" />
+        </div>
       </div>
     </div>
     <div class="spotify">
       <div class="spotify-btn">
-        <img class="icon-img" src="/img/music.png">
+        <img class="icon-img" src="/img/music.png" />
         <!-- <a href="https://www.flaticon.com/free-icons/google-play-music" title="google play music icons">Google play music icons created by Mayor Icons - Flaticon</a> -->
-        </div>
-        <div class="ssec">
+      </div>
+      <div class="ssec">
         <div id="spotifyPlayersContainer">
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWYoYGBbGKurt?utm_source=generator&theme=0" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXc8kgYqQLMfH?utm_source=generator" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3fKOnwgR2v4Qc0DH09KJKz?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7Cq5O9cTVa1OEutcLTYm5x?utm_source=generator" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/playlist/37i9dQZF1DWYoYGBbGKurt?utm_source=generator&theme=0"
+            width="100%"
+            height="500"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+          <iframe
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/playlist/37i9dQZF1DXc8kgYqQLMfH?utm_source=generator"
+            width="100%"
+            height="500"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+          <iframe
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/playlist/3fKOnwgR2v4Qc0DH09KJKz?utm_source=generator"
+            width="100%"
+            height="352"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+          <iframe
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/playlist/7Cq5O9cTVa1OEutcLTYm5x?utm_source=generator"
+            width="100%"
+            height="500"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
         </div>
         <div class="options">
-          <img class="thumbnail" src="/img/lofichill.jpeg" data-index="0">
-          <img class="thumbnail" src="/img/loshlofi.jpeg" data-index="1">
-          <img class="thumbnail" src="/img/codingmusic.jpeg" data-index="2">
-          <img class="thumbnail" src="/img/animelofi.jpeg" data-index="3">
+          <img class="thumbnail" src="/img/lofichill.jpeg" data-index="0" />
+          <img class="thumbnail" src="/img/loshlofi.jpeg" data-index="1" />
+          <img class="thumbnail" src="/img/codingmusic.jpeg" data-index="2" />
+          <img class="thumbnail" src="/img/animelofi.jpeg" data-index="3" />
         </div>
       </div>
     </div>
-
 
     <main class="app">
       <progress id="js-progress" value="0"></progress>
       <div class="progress-bar"></div>
       <div class="timer">
-
         <!-- Timebar -->
-      <div class="chart">
-        <div class="bar">
-          <span class="bar-name">Day:</span>
-          <div class="bar-progress">
-            <div class="bar-fill" id="dayBar"></div>
+        <div class="chart">
+          <div class="bar">
+            <span class="bar-name">Day:</span>
+            <div class="bar-progress">
+              <div class="bar-fill" id="dayBar"></div>
+            </div>
+            <span class="percentage" id="dayPercentage"></span>
           </div>
-          <span class="percentage" id="dayPercentage"></span>
-        </div>
-        <!-- <div class="bar">
+          <!-- <div class="bar">
           <span class="bar-name">Week:</span>
           <div class="bar-progress">
             <div class="bar-fill" id="weekBar"></div>
@@ -128,8 +215,8 @@
           </div>
           <span class="percentage" id="yearPercentage"></span>
         </div> -->
-      </div>
-      <!-- Timebar end -->
+        </div>
+        <!-- Timebar end -->
 
         <div class="button-group mode-buttons" id="js-mode-buttons">
           <button
@@ -172,7 +259,7 @@
     <script src="main.js"></script>
     <script src="time.js"></script>
     <script src="colors.js"></script>
-<!--     <script src="signin.js"></script>
+    <!--     <script src="signin.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script> -->
   </body>
 </html>
