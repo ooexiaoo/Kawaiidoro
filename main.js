@@ -393,3 +393,27 @@ document.addEventListener('DOMContentLoaded', function () {
     console.error('Error interacting with localStorage:', error);
   }
 });
+
+// Function to toggle the ad visibility
+function toggleAd() {
+  var adContainer = document.getElementById('floatingAd');
+  var adToggle = document.getElementById('adToggle');
+
+  if (adToggle.checked) {
+      // If the slider is checked, show the ad
+      adContainer.style.display = 'block';
+  } else {
+      // If the slider is unchecked, hide the ad
+      adContainer.style.display = 'none';
+  }
+}
+
+// Show the ad by default when the page loads
+window.onload = function() {
+  var adContainer = document.getElementById('floatingAd');
+  var adToggle = document.getElementById('adToggle');
+
+  // Set the initial state to show the ad and move the slider to the "on" position
+  adContainer.style.display = 'block';
+  adToggle.checked = true;
+};
