@@ -14,7 +14,7 @@ html {
   --longBreak: var(--pomodoro);
   --base: #1e1e2e;
   --crust: #11111b;
-  --Red: #f38ba8;
+  --Red: #c66c31;
   --Mauve: #cba6f7;
   --purple: #af73b4;
   --three: #244070;
@@ -417,5 +417,9 @@ button:focus, button:active {
   .spotify {
     visibility: hidden;
     display: none;
+  }
+  .color-switcher .theme-buttons-container .theme-buttons {
+    width: 40px;
+    height: 40px;
   }
 }
