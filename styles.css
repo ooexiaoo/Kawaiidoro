@@ -386,7 +386,19 @@ button:focus, button:active {
 .timer-settings {
   display: flex;
   flex-direction: column;
-  
+  color: white;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.timer-settings input, label {
+  width: 150px;
+  padding: 5px;
+  border: none;
+  border-radius: 1rem;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 550px) {
