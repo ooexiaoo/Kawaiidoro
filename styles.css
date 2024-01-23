@@ -254,9 +254,9 @@ button:active {
 .color-switcher {
   position: fixed;
   top: 25px;
-  right: -300px;
-  width: 300px;
-  max-width: 300px;
+  right: -380px;
+  width: 380px;
+  max-width: 380px;
   padding: 10px;
   background-color: var(--red);
   z-index: 1000;

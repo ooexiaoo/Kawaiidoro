@@ -48,6 +48,9 @@ themeButtons.forEach((color, index) => {
           document.querySelector(':root').style.setProperty('--Red', '#D44D6E');
           break;
         case 14:
+          document.querySelector(':root').style.setProperty('--Red', '#acf3f3');
+          break;
+          case 15:
           document.querySelector(':root').style.setProperty('--Red', '#1e1e2e');
           break;
         default:
