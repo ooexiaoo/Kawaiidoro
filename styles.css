@@ -496,4 +496,9 @@ label {
     width: 40px;
     height: 40px;
   }
+  .color-switcher {
+    right: -300px;
+    width: 300px;
+    max-width: 300px;
+  }
 }
