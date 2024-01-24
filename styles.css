@@ -11,7 +11,7 @@ html {
 }
 
 :root {
-  --pomodoro: url(/img/space2.jpg);
+  --pomodoro: url(/img/space2.webp);
   --shortBreak: var(--pomodoro);
   --longBreak: var(--pomodoro);
   --base: #1e1e2e;
