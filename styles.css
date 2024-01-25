@@ -351,10 +351,10 @@ button:active {
   width: 590px;
   max-width: 750px;
   padding: 10px;
-  background-color: var(--base);
+  background-color: none;
   z-index: 1000;
   padding: 0px;
-  border-radius: 10px;
+  border-radius: 30px;
   transition: 0.4s;
   margin-right: 10px;
   display: grid;
