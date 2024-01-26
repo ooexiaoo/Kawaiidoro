@@ -28,7 +28,27 @@ document.addEventListener('DOMContentLoaded', () => {
   } catch (error) {
     console.error('Error while loading timer data:', error);
   }
+
+    // Add event listener for space bar to start/pause timer
+    document.addEventListener('keydown', (event) => {
+      if (event.code === 'Space') {
+        event.preventDefault(); // Prevent the default behavior of the space key
+        toggleTimer(); // Call the function to start or pause the timer
+      }
+    });
+
 });
+
+/* New code */
+// Function to start or pause the timer
+function toggleTimer() {
+  const { action } = mainButton.dataset;
+  if (action === 'start') {
+    startTimer();
+  } else {
+    stopTimer();
+  }
+}
 
 function loadTimerSettings() {
   // Load timer settings from localStorage or use default values
@@ -267,7 +287,7 @@ const timer = {
       /* switchMode('pomodoro'); // Not sure if this line is intended to be here twice */
     } catch (error) {
       console.error('Error while loading timer data:', error);
-    }
+    }    
   });
   
   document.querySelector('.switcher-btn').onclick = () => {
