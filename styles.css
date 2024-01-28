@@ -309,9 +309,57 @@ button:active {
   height: 20px;
   width: 20px;
 }
+/* .theme-buttons-container {
+  z-index: 9999;
+  height: 400px;
+  overflow: auto;
+} */
+
+/* Update */
+/* Define scrollbar styles */
 .theme-buttons-container {
   z-index: 9999;
+  height: 400px;
+  overflow: auto;
+  scrollbar-width: 10px; /* For Firefox */
+  scrollbar-color: #d1c4e0 white; /* For Firefox */
 }
+
+/* For Webkit (Chrome, Safari, Opera) */
+.theme-buttons-container::-webkit-scrollbar {
+  width: 12px;
+}
+
+.theme-buttons-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom right, #d1e0e0, #f0f7f4, #dbe5e5);
+  border-radius: 8px;
+}
+
+/* For Firefox */
+.theme-buttons-container {
+  scrollbar-width: thin;
+}
+
+.theme-buttons-container::-moz-scrollbar-thumb {
+  background: linear-gradient(to bottom right, #d1e0e0, #f0f7f4, #dbe5e5);
+  border-radius: 8px;
+}
+
+/* For Edge */
+.theme-buttons-container {
+  -ms-overflow-style: none; /* Hide default scrollbar in Edge */
+}
+
+.theme-buttons-container::-ms-scrollbar-thumb {
+  background: linear-gradient(to bottom right, #d1e0e0, #f0f7f4, #dbe5e5);
+  border-radius: 8px;
+}
+
+.theme-buttons-container:hover::-ms-scrollbar-thumb {
+  background: linear-gradient(to bottom right, #d1e0e0, #f0f7f4, #dbe5e5);
+}
+/* update ends */
+
 .color-switcher .theme-buttons-container {
   display: flex;
   flex-wrap: wrap;
