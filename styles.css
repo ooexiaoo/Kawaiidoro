@@ -534,6 +534,44 @@ label {
   margin-left: 0px;
 }
 
+.select-wall {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style for the file input */
+#custom-background-input {
+  display: none; /* Hide the default file input */
+}
+
+/* Style for the custom file input button */
+#custom-background-label {
+  text-align: center;
+  background-color: var(--eating); /* Set the background color */
+  color: #fff; /* Set the text color */
+  padding: 10px 15px; /* Adjust padding as needed */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  display: inline-block;
+  transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+/* Change background color on hover */
+#custom-background-label:hover {
+  background-color: var(--eating); /* Change to a darker shade on hover */
+}
+
+/* Style for the file name display */
+#file-name-display {
+  margin-top: 10px; /* Adjust margin as needed */
+  white-space: nowrap; /* Prevent line breaks */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Display ellipsis for overflow */
+}
+
+
 @media screen and (max-width: 550px) {
   .clock {
     font-size: 8rem;

@@ -120,6 +120,13 @@
           style="background: var(--crust)"
         ></span>
 
+        <div class="select-wall">
+          <input type="file" id="custom-background-input" accept=".jpg, .jpeg, .png" />
+          <label for="custom-background-input" id="custom-background-label">Browse</label>
+          <div id="file-name-display"></div>
+          <button id="apply-background-btn">Apply Background</button>          
+        </div>
+
         <div class="timer-settings">
           <label for="pomodoro-input">Pomodoro Time</label>
           <input type="number" id="pomodoro-input" value="25" min="1" />
@@ -129,7 +136,7 @@
 
           <label for="long-break-input">Long Break Time</label>
           <input type="number" id="long-break-input" value="15" min="1" />
-        </div>
+        </div>     
       </div>
     </div>
     <div class="spotify">
@@ -285,6 +292,7 @@
     <script src="main.js"></script>
     <script src="time.js"></script>
     <script src="colors.js"></script>
+    <script src="upload.js"></script>
     <!--     <script src="signin.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script> -->
   </body>
