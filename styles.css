@@ -287,6 +287,10 @@ button:active {
   transition: 0.4s ease-in-out;
 }
 
+#apply-background-btn {
+  background-color: var(--base);
+}
+
 .color-switcher button:hover {
   background-color: var(--eating);
   color: var(--looking);
@@ -364,7 +368,6 @@ button:active {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: var(--base);
   border-radius: 1rem;
   background-color: var(--Red);
 }
@@ -548,11 +551,11 @@ label {
 /* Style for the custom file input button */
 #custom-background-label {
   text-align: center;
-  background-color: var(--eating); /* Set the background color */
+  background-color: var(--base); /* Set the background color */
   color: #fff; /* Set the text color */
   padding: 10px 15px; /* Adjust padding as needed */
   border: none; /* Remove border */
-  border-radius: 5px; /* Add border radius for rounded corners */
+  border-radius: 1rem; /* Add border radius for rounded corners */
   cursor: pointer; /* Change cursor to pointer on hover */
   display: inline-block;
   transition: background-color 0.3s ease; /* Add a smooth transition effect */
