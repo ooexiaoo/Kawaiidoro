@@ -11,12 +11,12 @@ html {
 }
 
 :root {
-  --pomodoro: url(/img/pxfuel.webp);
+  --pomodoro: url(/img/sf.webp);
   --shortBreak: var(--pomodoro);
   --longBreak: var(--pomodoro);
   --base: #1e1e2e;
   --crust: #11111b;
-  --Red: #d1c4e0;
+  --Red: #545149;
   --Mauve: #cba6f7;
   --purple: #af73b4;
   --three: #244070;
@@ -91,7 +91,7 @@ body {
   font-weight: bold;
   color: white; /* Text color */
   padding: 15px;
-  -webkit-text-stroke: 1px var(--Red);
+  /* -webkit-text-stroke: 1px var(--Red); */
 }
 
 .hide {

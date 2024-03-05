@@ -6,7 +6,7 @@ themeButtons.forEach((color, index) => {
       // Add a case statement to change the "--Red" color based on the selected wallpaper
       switch (index) {
         case 0:
-          document.querySelector(':root').style.setProperty('--Red', '#af73b4');
+          document.querySelector(':root').style.setProperty('--Red', '#9f699f');
           break;
         case 1:
           document.querySelector(':root').style.setProperty('--Red', '#c64b24');
@@ -60,7 +60,7 @@ themeButtons.forEach((color, index) => {
           document.querySelector(':root').style.setProperty('--Red', '#6f6e5a');
           break;
         case 18:
-          document.querySelector(':root').style.setProperty('--Red', '#9a7a60');
+          document.querySelector(':root').style.setProperty('--Red', '#545149');
           break;
         case 19:
           document.querySelector(':root').style.setProperty('--Red', '#838f90');

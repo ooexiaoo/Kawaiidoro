@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         Notification.requestPermission().then(function (permission) {
           if (permission === 'granted') {
             new Notification(
-              'Awesome! You will be notified at the start of each session'
+              'Awesome! You will be notified at the start of each session 🤩'
             );
           }
         });
