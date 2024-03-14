@@ -351,8 +351,8 @@ document.addEventListener('DOMContentLoaded', function () {
     if (savedName) {
       // If name exists, display it and hide the input container
       usernameDisplay.textContent = `Hello, ${savedName}!`;
-      usernameDisplay.classList.remove('hide');
-      inputContainer.classList.add('hide');
+      /* usernameDisplay.classList.remove('hide');
+      inputContainer.classList.add('hide'); */
       document.body.appendChild(usernameDisplay);
     } else {
       // If name doesn't exist, show the input container
