@@ -378,7 +378,7 @@ document.addEventListener('DOMContentLoaded', function () {
           // Display entered name and hide the input container
           usernameDisplay.textContent = `Hello, ${usernameInput}!`;
           usernameDisplay.classList.remove('hide');
-          inputContainer.classList.add('hide');
+          inputContainer.classList.remove('hide');
           document.body.appendChild(usernameDisplay);
         } catch (error) {
           // Handle error while saving to local storage
