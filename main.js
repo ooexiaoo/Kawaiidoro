@@ -430,3 +430,32 @@ const colorPicker = new iro.ColorPicker("#color-picker", {
   // Set the initial color to pure red
   color: "#f00"
 });
+
+// Add an event listener to the color picker to apply the selected color to --pomodoro
+colorPicker.on('color:change', function(color) {
+  // Check if the selected color is 'none'
+  if (color.hexString === 'none') {
+    // Set --pomodoro to 'none' if the selected color is 'none'
+    document.querySelector(':root').style.setProperty('--pomodoro', 'none');
+  } else {
+    // Apply the selected color to --pomodoro
+    document.querySelector(':root').style.setProperty('--pomodoro', color.hexString);
+    
+    try {
+      // Access the localStorage data
+      const customBackgroundUrl = localStorage.getItem('customBackground');
+      
+      // Check if customBackgroundUrl is not null
+      if (customBackgroundUrl) {
+        // Apply the custom background URL from localStorage
+        document.querySelector(':root').style.setProperty('--pomodoro', `url(${customBackgroundUrl})`);
+      }
+    } catch (error) {
+      // Handle error while accessing localStorage data
+      console.error('Error accessing customBackgroundUrl from localStorage:', error);
+    }
+  }
+});
+
+
+
