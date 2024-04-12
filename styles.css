@@ -11,7 +11,7 @@ html {
 }
 
 :root {
-  --pomodoro: var(--crust);
+  --pomodoro: url(/img/sf.webp);
   --shortBreak: var(--pomodoro);
   --longBreak: var(--pomodoro);
   --base: #1e1e2e;
