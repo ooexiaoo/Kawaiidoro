@@ -41,6 +41,8 @@
   gtag('config', 'G-DZK5QVQE51');
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
+
 <link rel="canonical" href="https://kawaiidoro.com">
   </head>
   <body>
@@ -156,14 +158,21 @@
           data-color="url(/img/catgirl.webp)"
           style="background: url(/img/catgirl60.webp)"
         ></span>
-
+        <span
+          class="theme-buttons color-picker-button"
+          id="hex"
+          style="background: url(customBackgroundUrl)"
+          >
+          <div id="color-picker"></div>
+        </span>
+        
         <div class="select-wall">
           <input type="file" id="custom-background-input" accept=".jpg, .jpeg, .png" />
           <label for="custom-background-input" id="custom-background-label">Browse</label>
           <div id="file-name-display"></div>
           <button id="apply-background-btn">Apply Background</button>          
         </div>
-
+        
         <div class="input-container">
           <form id="name-form">
             <label for="username">Please Enter Your Name 🤗</label>
@@ -174,7 +183,7 @@
               name="username"
               required
             />
-            <button id="submit-btn" type="submit">Lets Go!</button>
+            <button id="submit-btn" type="submit">Submit</button>
           </form>
         </div>
 

@@ -1,7 +1,11 @@
 themeButtons.forEach((color, index) => {
   color.addEventListener("click", () => {
     let dataColor = color.getAttribute("data-color");
-    document.querySelector(":root").style.setProperty("--pomodoro", dataColor);
+    if (index !== 20) {
+      document
+        .querySelector(":root")
+        .style.setProperty("--pomodoro", dataColor);
+    }
 
     // Add a case statement to change the "--Red" color based on the selected wallpaper
     switch (index) {
@@ -65,6 +69,11 @@ themeButtons.forEach((color, index) => {
       case 19:
         document.querySelector(":root").style.setProperty("--Red", "#838f90");
         break;
+      case 20:
+        let selectedColor = colorPicker.color.hexString;
+        document.querySelector(":root").style.setProperty("--Red", selectedColor);
+        document.querySelector(":root").style.setProperty("--pomodoro", `url(${savedCustomBackground})`);
+      break;
       default:
         document
           .querySelector(":root")

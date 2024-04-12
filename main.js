@@ -413,3 +413,20 @@ document.addEventListener('DOMContentLoaded', function () {
     console.error('Error interacting with localStorage:', error);
   }
 });
+
+/* let colorIndicator = document.querySelector('.color-indicator');
+const colorPicker = new iro.colorPicker("#color-picker", {
+  width:150, color: "#fff"
+})
+colorPicker.on('color:change', function(color) {
+  colorIndicator.style.backgroundColor = color.hexString
+  document.querySelector(':root').style.setProperty('--pomodoro', color.hexString);
+}) */
+
+// Create a color picker instance
+const colorPicker = new iro.ColorPicker("#color-picker", {
+  // Set the size of the color picker
+  width: 100,
+  // Set the initial color to pure red
+  color: "#f00"
+});
