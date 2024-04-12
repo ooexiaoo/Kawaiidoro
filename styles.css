@@ -324,7 +324,7 @@ button:active {
 .theme-buttons-container {
   z-index: 9999;
   height: 400px;
-  overflow: auto;
+  overflow:scroll;
   scrollbar-width: 10px; /* For Firefox */
   scrollbar-color: #d1c4e0 white; /* For Firefox */
   scrollbar-color: #d1e0e0 #f0f7f4; /* For Chrome, Safari, and Opera */
@@ -618,5 +618,14 @@ label {
     right: -300px;
     width: 300px;
     max-width: 300px;
+  }
+  .color-picker-button{
+    visibility: hidden;
+    display: none;
+    width: 0;
+    height: 0;
+  }
+  #hex{
+    height: 0;
   }
 }
