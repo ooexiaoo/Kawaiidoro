@@ -456,6 +456,3 @@ colorPicker.on('color:change', function(color) {
     }
   }
 });
-
-
-
