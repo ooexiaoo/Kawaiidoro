@@ -593,6 +593,39 @@ label {
   vertical-align: middle;
 }
 
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#search-input{
+  width: 90%;
+  max-width: 300px;
+  height: 40px;
+  border-radius: 1rem;
+  border: none;
+  padding-left: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px;
+  margin-top: 25px;
+}
+
+#search-button {
+  width: fit-content;
+  height: 40px;
+  border-radius: 1rem;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
+  cursor: pointer;
+  background-color: var(--base);
+  color: #fff;
+}
+
 @media screen and (max-width: 550px) {
   .clock {
     font-size: 8rem;

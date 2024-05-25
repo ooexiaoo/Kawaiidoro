@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add event listener for space bar to start/pause timer
     document.addEventListener('keydown', (event) => {
-      if (event.code === 'Space') {
+      if (event.code === 'altLeft' || event.code === 'AltLeft') {
         event.preventDefault(); // Prevent the default behavior of the space key
         toggleTimer(); // Call the function to start or pause the timer
       }
