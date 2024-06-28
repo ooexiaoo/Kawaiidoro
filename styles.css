@@ -11,7 +11,7 @@ html {
 }
 
 :root {
-  --pomodoro: url(/img/rei.webp);
+  --pomodoro: url(/img/asuka.webp);
   --shortBreak: var(--pomodoro);
   --longBreak: var(--pomodoro);
   --base: #1e1e2e;
