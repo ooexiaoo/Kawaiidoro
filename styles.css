@@ -11,12 +11,12 @@ html {
 }
 
 :root {
-  --pomodoro: url(/img/pxfuel1.webp);
+  --pomodoro: url(/img/rei.webp);
   --shortBreak: var(--pomodoro);
   --longBreak: var(--pomodoro);
   --base: #1e1e2e;
   --crust: #11111b;
-  --Red: #f87c87;
+  --Red: #d7301d;
   --Mauve: #cba6f7;
   --purple: #af73b4;
   --three: #244070;
