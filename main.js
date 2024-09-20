@@ -30,12 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
     // Add event listener for space bar to start/pause timer
-    document.addEventListener('keydown', (event) => {
+   /*  document.addEventListener('keydown', (event) => {
       if (event.code === 'altLeft' || event.code === 'AltLeft') {
         event.preventDefault(); // Prevent the default behavior of the space key
         toggleTimer(); // Call the function to start or pause the timer
       }
-    });
+    }); */
 
 });
 
@@ -178,7 +178,16 @@ const timer = {
         }
   
         if (Notification.permission === 'granted') {
-          const text =
+         
+  
+  function handleMode(event) {
+    const { mode } = event.target.dataset;
+  
+    if (!mode) return;
+  
+    switchMode(mode);
+    stopTimer();
+  } const text =
             timer.mode === 'pomodoro' ? 'Get back to work!' : 'Take a break!';
           new Notification(text);
         }
@@ -386,7 +395,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
 
-      try {
+      /* try {
         // Check if timer data and paused time exist in localStorage
         const storedTimerData = localStorage.getItem('timerData');
         const pausedTime = localStorage.getItem('pausedTime');
@@ -406,7 +415,7 @@ document.addEventListener('DOMContentLoaded', function () {
       } catch (error) {
         // Handle error while accessing localStorage data
         console.error('Error accessing timer data from localStorage:', error);
-      }
+      } */
     });
   } catch (error) {
     // Handle any other localStorage related errors
@@ -424,13 +433,13 @@ colorPicker.on('color:change', function(color) {
 }) */
 
 // Create a color picker instance
-const colorPicker = new iro.ColorPicker("#color-picker", {
+/* const colorPicker = new iro.ColorPicker("#color-picker", {
   // Set the size of the color picker
   width: 100,
   // Set the initial color to pure red
   color: "#f00"
 });
-
+ */
 // Add an event listener to the color picker to apply the selected color to --pomodoro
 colorPicker.on('color:change', function(color) {
   // Check if the selected color is 'none'

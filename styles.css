@@ -78,7 +78,7 @@ body {
 #submit-btn {
   border-radius: 1rem;
   font-size: 20px;
-  /* width: 200px; */
+  width: 200px; 
   padding: 10px;
   margin: 10px;
   border: none;
@@ -322,12 +322,13 @@ button:active {
 /* Update */
 /* Define scrollbar styles */
 .theme-buttons-container {
+  padding: 25px 0;
   z-index: 9999;
   height: 400px;
-  overflow:scroll;
+  overflow:auto;
   scrollbar-width: 10px; /* For Firefox */
-  scrollbar-color: #d1c4e0 white; /* For Firefox */
-  scrollbar-color: #d1e0e0 #f0f7f4; /* For Chrome, Safari, and Opera */
+  scrollbar-color: #000000 rgb(255, 255, 193); /* For Firefox */
+  scrollbar-color: #000000  rgb(251, 255, 193); /* For Chrome, Safari, and Opera */
 }
 
 /* For Webkit (Chrome, Safari, Opera) */
@@ -480,14 +481,43 @@ button:active {
   padding: 5px;
 }
 
-.timer-settings input,
-label {
-  width: 150px;
-  padding: 5px;
+.timer-settings input {
+  width: 70px;
+  height: 50px;
+  padding: 0px;
   border: none;
   border-radius: 1rem;
-  font-size: 14px;
+  font-size: 30px;
   font-weight: bold;
+  text-align: center;
+  
+  /* Enable the native spinner controls */
+  -moz-appearance: textfield; /* For Firefox */
+  -webkit-appearance:none; /* For WebKit browsers */
+  appearance: textfield; /* For other browsers */
+}
+
+/* Reset spinner removal on WebKit browsers (so they actually work) */
+.timer-settings input::-webkit-outer-spin-button,
+.timer-settings input::-webkit-inner-spin-button {
+  -webkit-appearance: inner-spin-button;
+  height: 50px; /* Match the height of your input to increase spinner size */
+}
+
+/* Make sure arrows are visible for Firefox */
+.timer-settings input[type=number] {
+  -moz-appearance: textfield; /* Forcing it to display in Firefox */
+}
+
+/* Optional: Adjust hover and active state to provide feedback */
+.timer-settings input:hover {
+  outline: 2px solid var(--crust); /* Add focus state for better accessibility */
+}
+
+
+.timer-settings label {
+  width: 150px;
+  padding: 5px;
 }
 
 /* Slider styles */
