@@ -44,7 +44,7 @@ function updateBars() {
 
 // Function to format percentage with leading zero if necessary
 function formatPercentage(percentage) {
-  return percentage.toFixed(2).padStart(5, '0') + '%';
+  return percentage.toFixed(3).padStart(6, '0') + '%';
 }
 
 // Update bars on page load

@@ -272,7 +272,7 @@ const timer = {
     stopTimer();
   }
   
-  document.addEventListener('DOMContentLoaded', () => {
+/*   document.addEventListener('DOMContentLoaded', () => {
     try {
       const storedTimerData = localStorage.getItem('timerData');
 
@@ -294,11 +294,11 @@ const timer = {
       // Additional logic related to Notification permissions or other setup
   
       /* switchMode('pomodoro'); // Not sure if this line is intended to be here twice */
-    } catch (error) {
+/*     } catch (error) {
       console.error('Error while loading timer data:', error);
     }    
-  });
-  
+  }); */
+ 
   document.querySelector('.switcher-btn').onclick = () => {
     document.querySelector('.color-switcher').classList.toggle('active');
   };

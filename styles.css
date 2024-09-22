@@ -11,12 +11,12 @@ html {
 }
 
 :root {
-  --pomodoro: url(/img/asuka.webp);
+  --pomodoro: url(/img/Wallpapers/gradient1.webp);
   --shortBreak: var(--pomodoro);
   --longBreak: var(--pomodoro);
   --base: #1e1e2e;
   --crust: #11111b;
-  --Red: #d7301d;
+  --Red: #b80dfe;
   --Mauve: #cba6f7;
   --purple: #af73b4;
   --three: #244070;
@@ -121,7 +121,7 @@ progress {
 
 /* Progress bar track */
 progress[value]::-webkit-progress-bar {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 /* Progress bar fill */
@@ -161,22 +161,22 @@ progress::-webkit-progress-value {
 }
 
 .clock {
-  margin-top: 50px;
-  margin-bottom: 30px;
-  font-size: 15rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 10rem;
   line-height: 1;
   display: flex;
   align-items: center;
   font-family: arial, sans-serif;
   color: #fff;
   z-index: 3;
-  background-color: rgba(0, 0, 0, 0.25);
+  /* background-color: rgba(0, 0, 0, 0.05);*/
   border-radius: 1rem;
 }
 
-#js-seconds {
+/* #js-seconds {
   z-index: 1;
-}
+} */
 
 .mode-button {
   font-size: 16px;
@@ -228,6 +228,13 @@ button:active {
   z-index: 3;
 }
 
+#js-pomodoro.button.mode-button.active,
+#js-short-break.button.mode-button.active,
+#js-long-break.button.mode-button.active {
+  background-color: #fff;
+  color: black;
+}
+
 .hidden {
   display: none;
 }
@@ -235,19 +242,11 @@ button:active {
 #js-pomodoro,
 #js-short-break,
 #js-long-break {
-  background-color: rgba(255, 255, 255, 0);
-  /* box-shadow: rgb(255, 255, 255) 0px 0px 10px; */
+  background-color: transparent;
   color: #fff;
   transition: 0.25s ease-in-out;
   border-radius: 4rem;
-}
-
-#js-pomodoro,
-#js-short-break,
-#js-long-break {
-  background-color: var(--Red);
-  color: #fff;
-  transition: 0.25s ease-in-out;
+  border: 1px solid #fff;
 }
 
 #js-pomodoro:hover,
@@ -312,6 +311,7 @@ button:active {
 .icon-img {
   height: 20px;
   width: 20px;
+  fill: #fff;
 }
 /* .theme-buttons-container {
   z-index: 9999;
@@ -327,8 +327,8 @@ button:active {
   height: 400px;
   overflow:auto;
   scrollbar-width: 10px; /* For Firefox */
-  scrollbar-color: #000000 rgb(255, 255, 193); /* For Firefox */
-  scrollbar-color: #000000  rgb(251, 255, 193); /* For Chrome, Safari, and Opera */
+  scrollbar-color: #ffffff transparent; /* For Firefox */
+  scrollbar-color: #ffffff  transparent; /* For Chrome, Safari, and Opera */
 }
 
 /* For Webkit (Chrome, Safari, Opera) */
@@ -451,10 +451,11 @@ button:active {
 }
 
 .thumbnail {
-  margin: 0 5px;
+  margin: 5px;
   width: 60px;
   height: 60px;
-  border-radius: 1em;
+  border: 10px #fff;
+  border-radius: 5em;
 }
 
 #spotifyPlayersContainer {
