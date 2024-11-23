@@ -8,6 +8,7 @@
   <title>Kawaiidoro - The Kawaii Anime Pomodoro Timer</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="time.css" />
+  <link rel="stylesheet" href="sticky.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
   <link rel="icon" type="image/x-icon" href="/Web/favicon.ico" />
   <!-- <meta name="google-signin-client_id" content="771363056084-2o72bubv5n8f4ggame9ht91tf58r7akj.apps.googleusercontent.com"> -->
@@ -236,20 +237,22 @@
   </main>
 
   <!-- Floating ad container -->
-  <!-- <div class='sticky-ads' id='sticky-ads'>
-  <div class='sticky-ads-close' onclick='document.getElementById("sticky-ads").style.display="none"'><svg viewbox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'><path d='M278.6 256l68.2-68.2c6.2-6.2 6.2-16.4 0-22.6-6.2-6.2-16.4-6.2-22.6 0L256 233.4l-68.2-68.2c-6.2-6.2-16.4-6.2-22.6 0-3.1 3.1-4.7 7.2-4.7 11.3 0 4.1 1.6 8.2 4.7 11.3l68.2 68.2-68.2 68.2c-3.1 3.1-4.7 7.2-4.7 11.3 0 4.1 1.6 8.2 4.7 11.3 6.2 6.2 16.4 6.2 22.6 0l68.2-68.2 68.2 68.2c6.2 6.2 16.4 6.2 22.6 0 6.2-6.2 6.2-16.4 0-22.6L278.6 256z'/></svg></div>
-  <div class='sticky-ads-content'>
-    <script type="text/javascript">
-      atOptions = {
-        'key' : '3bb336f726b43c6d01c01ee74984e3d3',
-        'format' : 'iframe',
-        'height' : 50,
-        'width' : 320,
-        'params' : {}
-      };
-      document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/3bb336f726b43c6d01c01ee74984e3d3/invoke.js"></scr' + 'ipt>');
-    </script>
-  </div></div> -->
+<!-- Add a sticky bottom ad container -->
+<div class="sticky-ad">
+  <!-- Add a close button -->
+  <button class="close-btn">X</button>
+  <!-- Add your ad content here -->
+  <script type="text/javascript">
+    atOptions = {
+      'key' : 'ee4fc592d7e25158f738fa9242b3ecaf',
+      'format' : 'iframe',
+      'height' : 90,
+      'width' : 728,
+      'params' : {}
+    };
+  </script>
+  <script type="text/javascript" src="//www.highperformanceformat.com/ee4fc592d7e25158f738fa9242b3ecaf/invoke.js"></script>
+</div>
 
   <div class="hidden">
     <audio src="backtowork.mp3" data-sound="pomodoro"></audio>
@@ -264,6 +267,7 @@
   <!-- <script src="search.js"></script> -->
   <!--     <script src="signin.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script> -->
+  <script src="sticky.js"></script>
 </body>
 
 </html>
